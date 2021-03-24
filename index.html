@@ -1,96 +1,35 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<meta charset='utf-8'>
-	<meta http-equiv='X-UA-Compatible' content='IE=edge'>
-	<title>Chayachanok Duangsanit's Portfolio</title>
-	<meta name='viewport' content='width=device-width, initial-scale=1'>
-	<link rel='stylesheet' type='text/css' media='screen' href='main.css'>
-</head>
-<body>
-	<div class="grid-container">
-        <div id="header">
-			<h1>Portfolio</h1>
-			<br>
-		</div>
-        <div id="main1">
-			<h2>Contract</h2>
-			<br>
-			<ul>
-				<h4>
-				<li><a href="https://www.deviantart.com/luciotailz">DeviantArt </a></li>
-				<li><a href="https://www.pixiv.net/en/users/5262833">Pixiv</li>
-				<li><a href="https://www.instagram.com/luciotailz/">Instagram</li>
-				<li><a href="https://www.facebook.com/Luciotailz">FB Page</a></li>
-				</h4>
-			</ul>
-			
-		</div>
-        <div id="main2">
-			<br>
-			<h2>Chayachanok Duangsanit</h2>
-			<br>
-			<div><img id="me_pic" img src="ren.jpg" alt="Picture" ></div>
-		    <h3>Hobby</h3>
-			<h5>• Drawing</h5>
-<h5>• Playing Video game / Analysis game Overrall (Gameplay,Game Design,Coding,Model Animation)</h5>
-<h5>• Tarot card reading/ Runes reading</h5>
-<h5>• Watching Animation and Movie / Analysis Overrall (Story and camera)</h5>
-			<br>
+	<head>
+		<meta charset="UTF-8">
+		<title>Square game</title>
+		<script type="text/javascript" src="game.js"></script>
+		<link rel="stylesheet" type="text/css" href="game.css">
+	</head>
+	<body>
+		<!-- these codes were adapted from https://courses.cs.washington.edu/courses/cse154/17sp/lecture/more-dom/code/squares.html  -->
 
-			<br>
-			<h3>Skills</h3>
-			<h5>• C# Coding</h5>
-			<h5>• Game Design</h5>
-			<h5>• Visual Drawing</h5>
-			<br>
+		<fieldset>
+			<legend>Control</legend>
+			Number of box: 
+			<input type="text" name="numbox" id="numbox">
+			<select name="color" id = "color">
+  				<option value="red">Red</option>
+  				<option value="blue">Blue</option>
+  				<option value="green">Green</option>
+			</select>
+			<button id="start">Start</button>
+			<div id="timerClock"> Timer:
+				<div id="clock"></div>
+			</div>
+		</fieldset>
 
-			<br>
-			<h3>Interesting</h3>
-			<h5>• Game Design</h5>
-			<h5>• Game Development</h5>
-			<h5>• Story telling</h5>
-			<br>
+		
+		
 
-			<h2>Portfolio</h2>
-			<ul>
-			<br>
-				<h3>NSC2021 : Matica</h3>
-				<div><img id="me_pic" img src="maticapos2_1.jpg" alt="Picture" ></div>
-				<li><a href="https://drive.google.com/file/d/1_OCU3v2mBP_ZsW1bIJcDsfzmC8YLobmK/view">ตัวอย่างเกม</a></li>
-				<h4>Matica เป็นโปรแกรมเพื่อความบันเทิงในระบบปฏิบัติการ Window ที่สามารถเล่นแบบ Online ได้ โดยมีรูปแบบการเล่นแบบ 2D side-scroller บรรยากาศภายในเกมคือโลกที่โดนทำลายเพราะการรุกรานของเผ่าเมตาเซเปียน ทำให้มนุษย์คนสุดท้ายอย่าง ดร.มาริเอะ ต้องสร้างหุ่นยนต์เพิ่มเพื่อตั้งรับการโจมตีของเผ่าเมตาเซเปียและสิ่งมีชีวิตนอกโลกอื่นๆโดยผู้เล่นจะต้องทำการแข่งขันว่าใครจะเป็นผู้เหลือรอดในแต่ละด่านจนถึงด่านสุดท้าย โดยสามารถเลือกตัวละครได้ และตัวละครแต่ละตัวก็จะมีความสามารถที่แตกต่างกันไป</h4>
-				<h4>Role : Character Design, Character Sprite</h4>
-
-				<br>
-				<br>
-
-				<h3>Deamolus</h3>
-				<div><img id="me_pic" img src="poster_D.jpg" alt="Picture" ></div>
-				<li><a href="https://drive.google.com/drive/u/0/folders/1UsSIdoA4p63QXRh-vKZmNGaie9lU6rtG">ตัวอย่างเกม</a></li>
-				<h4>Deamolus เป็นโปรแกรมเพื่อความบันเทิงในระบบปฏิบัติการ Window โดยมีรูปแบบการเล่นแบบ Stand Alone , 2D side-scroller , Platformer ที่เกี่ยวกับเหล่าทูตสวรรค์ที่ลงมายังโลกที่เต็มไปด้วยคนบาป เพื่อลบล้างความปีศาจที่มาจากนรกนำทัพโดย Lucifer</h4>
-				<h4>Role : Character Design, Character Sprite , Gameplay Design, Programing</h4>
-				<br>
-				<br>
-			
+		<div id="game-container">
+			<div id="game-layer"></div>
 		</div>
-        <div id="right">
-			
-			<h2>Assignment Works</h2>
-			<br>
-			<ul>
-				<h4>
-				Main Page
-				<li><a href="assignment4/recipe.html">Assignment 4</li>
-				<li><a href="assignment5/index.html">Assignment 5</li>
-				<li><a href="assignment6/login.html">Assignment 6</li>
-				<li><a href="assignment7/index.html">Assignment 7</a></li> 
-			
-				</h4>
-			</ul>
-		</div>
-        <div id="footer">
-			Reference : CSS from <a href="assignment4/recipe.html">Chicken Satay</a>	
-		</div>
-	</div>	
-</body>
+	
+	</body>
 </html>
